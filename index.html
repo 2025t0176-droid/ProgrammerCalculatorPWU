@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Enhanced Programmer Calc</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://googleapis.com" rel="stylesheet">
+</head>
+<body>
+    <!-- Animated Cyber Background -->
+    <div class="bg-animation"></div>
+    <div class="grid-overlay"></div>
+
+    <a href="https://calculatorpwu.org" class="super-home-btn">
+        <span class="glow-text">🏠 HOME</span>
+    </a>
+
+    <div class="glass-calculator">
+        <div class="calc-header">
+            <span class="scanline"></span>
+            <div class="header-info">
+                <span class="label">SYSTEM: PROGRAMMER_Calculator</span>
+                <span class="status-dot"></span>
+            </div>
+            <div class="display-area">
+                <div class="main-display" id="display">0</div>
+            </div>
+        </div>
+
+        <div class="conversion-panel">
+            <div class="conv-item hex"><span>HEX</span><span id="hex-val">0</span></div>
+            <div class="conv-item dec active"><span>DEC</span><span id="dec-val">0</span></div>
+            <div class="conv-item oct"><span>OCT</span><span id="oct-val">0</span></div>
+            <div class="conv-item bin"><span>BIN</span><span id="bin-val">0</span></div>
+        </div>
+
+        <div class="keypad">
+            <button class="key letter" onclick="appendToDisplay('A')">A</button>
+            <button class="key letter" onclick="appendToDisplay('B')">B</button>
+            <button class="key letter" onclick="appendToDisplay('C')">C</button>
+            <button class="key func" onclick="clearDisplay()">AC</button>
+            <button class="key func" onclick="deleteLast()">DEL</button>
+
+            <button class="key letter" onclick="appendToDisplay('D')">D</button>
+            <button class="key letter" onclick="appendToDisplay('E')">E</button>
+            <button class="key letter" onclick="appendToDisplay('F')">F</button>
+            <button class="key op" onclick="appendToDisplay('/')">÷</button>
+            <button class="key op" onclick="appendToDisplay('*')">×</button>
+
+            <button class="key num" onclick="appendToDisplay('7')">7</button>
+            <button class="key num" onclick="appendToDisplay('8')">8</button>
+            <button class="key num" onclick="appendToDisplay('9')">9</button>
+            <button class="key op" onclick="appendToDisplay('-')">−</button>
+            <button class="key num" onclick="appendToDisplay('4')">4</button>
+
+            <button class="key num" onclick="appendToDisplay('5')">5</button>
+            <button class="btn num" onclick="appendToDisplay('6')">6</button>
+            <button class="key op" onclick="appendToDisplay('+')">+</button>
+            <button class="key num" onclick="appendToDisplay('1')">1</button>
+            <button class="key num" onclick="appendToDisplay('2')">2</button>
+
+            <button class="key num" onclick="appendToDisplay('3')">3</button>
+            <button class="key num" onclick="appendToDisplay('0')">0</button>
+            <button class="key num" onclick="appendToDisplay('.')">.</button>
+            <button class="key equal" onclick="calculate()">=</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
